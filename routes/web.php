@@ -25,3 +25,4 @@ Route::post('/tp/add/expense', 'ExpenseController@post_add');
 // Salary
 Route::get('/tp/salary/list', 'SalaryController@list');
 Route::get('/tp/salary/add', 'SalaryController@add');
+Route::post('/tp/add/salary', 'SalaryController@post_add');

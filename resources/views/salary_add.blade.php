@@ -18,7 +18,7 @@
             <!-- Card Body -->
             <div class="card-body">
                 <!-- <form method="POST" action="{{ url('/tp/add/expense') }}"> -->
-                {{ Form::open(array('url' => 'tp/add/expense', 'method' => 'post')) }}
+                {{ Form::open(array('url' => 'tp/add/salary', 'method' => 'post')) }}
 
                     <div class="form-row">
                         <div class="form-group col-md-8">

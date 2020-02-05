@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\Salary;
 
 class SalaryController extends Controller
 {
@@ -13,9 +15,8 @@ class SalaryController extends Controller
 
     public function list()
     {
-        // $expenses = Expense::where('user_id', Auth::user()->id)
-        //        ->get();
-        $salaries = array();
+        $salaries = Salary::where('user_id', Auth::user()->id)
+               ->get();
         return view('salary_list', array(
             'salaries' => $salaries
         ));
@@ -24,5 +25,16 @@ class SalaryController extends Controller
     public function add()
     {
         return view('salary_add');
+    }
+
+    public function post_add(Request $request)
+    {
+        $salary = new Salary();
+        $salary->amount = $request->amount;
+        $salary->date = date_create($request->date);
+        $salary->user_id = Auth::user()->id;
+
+        $salary->save();
+        return redirect('tp/salary/list');
     }
 }

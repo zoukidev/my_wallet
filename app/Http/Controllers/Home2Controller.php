@@ -15,18 +15,29 @@ class Home2Controller extends Controller
 
     public function index()
     {
+        $earnings_annual = 0;
+        $earnings_monthly = 0;
+        $earnings_all = 0;
         $salaries = Salary::where('user_id', Auth::user()->id)
                ->get();
 
-        $earnings_annual = 0;
         foreach ($salaries as $salary) {
-            // dd(date('Y', strtotime($salary->date)));
             if (date('Y', strtotime($salary->date)) == date('Y')) {
                 $earnings_annual += $salary->amount;
             }
+
+            if (date('m', strtotime($salary->date)) == date('m')) {
+                $earnings_monthly += $salary->amount;
+            }
+
+            $earnings_all += $salary->amount;
         }
+
         return view('home2', array(
-            'earnings_annual' => $earnings_annual
+            'earnings_annual' => $earnings_annual,
+            'earnings_monthly' => $earnings_monthly,
+            'earnings_all' => $earnings_all,
+            'objectives_count' => 0
         ));
     }
 

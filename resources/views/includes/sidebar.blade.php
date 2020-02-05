@@ -29,7 +29,7 @@
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseExpense" aria-expanded="true" aria-controls="collapseExpense">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fas fa-fw fa-money-bill-alt"></i>
             <span>Expenses</span>
         </a>
         <div id="collapseExpense" class="collapse" aria-labelledby="headingExpense" data-parent="#accordionSidebar">
@@ -52,14 +52,14 @@
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSalary" aria-expanded="true" aria-controls="collapseSalary">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fas fa-fw fa-file-invoice-dollar"></i>
             <span>Salaries</span>
         </a>
         <div id="collapseSalary" class="collapse" aria-labelledby="headingSalary" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <!-- <h6 class="collapse-header">Custom Components:</h6> -->
-                <a class="collapse-item" href="{{ url('/tp/expense/add') }}">Add</a>
-                <a class="collapse-item" href="{{ url('/tp/expense/list') }}">List</a>
+                <a class="collapse-item" href="{{ url('/tp/salary/add') }}">Add</a>
+                <a class="collapse-item" href="{{ url('/tp/salary/list') }}">List</a>
             </div>
         </div>
     </li>

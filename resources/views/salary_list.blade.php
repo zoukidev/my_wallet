@@ -17,7 +17,7 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                    <table class="table">
+                    <table id="dataTable" class="table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -40,4 +40,10 @@
 
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('js/datatable-init.js') }}"></script>
 @endsection

@@ -51,3 +51,8 @@
     </div>
 </div>
 @endsection
+
+@section('scripts')
+    <script src="{{ asset('js/datepicker.min.js') }}"></script>
+    <script src="{{ asset('js/datepicker-init.js') }}"></script>
+@endsection

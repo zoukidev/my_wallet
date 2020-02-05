@@ -19,16 +19,18 @@
             <div class="card-body">
                 <!-- <form method="POST" action="{{ url('/tp/add/expense') }}"> -->
                 {{ Form::open(array('url' => 'tp/add/expense', 'method' => 'post')) }}
-                    <div class="form-group">
-                        <label for="inputAmount">Amount</label>
-                        <input type="number" name="amount" step="0.01" class="form-control" id="inputAmount">
-                    </div>
 
-                    <div class="form-group">
-                        <label for="inputDate">Date</label>
-                        <input name="date" data-toggle="datepicker" class="form-control" id="inputDate">
-                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="inputAmount">Amount</label>
+                            <input type="number" name="amount" step="0.01" class="form-control" id="inputAmount">
+                        </div>
 
+                        <div class="form-group col-md-4">
+                            <label for="inputDate">Date</label>
+                            <input name="date" data-toggle="datepicker" class="form-control" id="inputDate">
+                        </div>
+                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 {{ Form::close() }}
             </div>

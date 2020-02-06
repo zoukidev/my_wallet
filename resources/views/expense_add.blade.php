@@ -17,8 +17,7 @@
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                <!-- <form method="POST" action="{{ url('/tp/add/expense') }}"> -->
-                {{ Form::open(array('url' => 'tp/add/expense', 'method' => 'post')) }}
+                {{ Form::open(array('url' => 'dashboard/add/expense', 'method' => 'post')) }}
                     <div class="form-group">
                         <label for="inputTitle">Title</label>
                         <input type="text" name="title" class="form-control" id="inputTitle">
@@ -40,8 +39,6 @@
                             <input name="date" data-toggle="datepicker" class="form-control" id="inputDate">
                         </div>
                     </div>
-
-
 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 {{ Form::close() }}

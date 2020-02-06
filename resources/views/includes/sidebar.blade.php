@@ -12,7 +12,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="{{ url('/tp') }}">
+        <a class="nav-link" href="{{ url('/dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
         </a>
@@ -35,8 +35,8 @@
         <div id="collapseExpense" class="collapse" aria-labelledby="headingExpense" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <!-- <h6 class="collapse-header">Custom Components:</h6> -->
-                <a class="collapse-item" href="{{ url('/tp/expense/add') }}">Add</a>
-                <a class="collapse-item" href="{{ url('/tp/expense/list') }}">List</a>
+                <a class="collapse-item" href="{{ url('/dashboard/expense/add') }}">Add</a>
+                <a class="collapse-item" href="{{ url('/dashboard/expense/list') }}">List</a>
             </div>
         </div>
     </li>
@@ -58,8 +58,8 @@
         <div id="collapseSalary" class="collapse" aria-labelledby="headingSalary" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <!-- <h6 class="collapse-header">Custom Components:</h6> -->
-                <a class="collapse-item" href="{{ url('/tp/salary/add') }}">Add</a>
-                <a class="collapse-item" href="{{ url('/tp/salary/list') }}">List</a>
+                <a class="collapse-item" href="{{ url('/dashboard/salary/add') }}">Add</a>
+                <a class="collapse-item" href="{{ url('/dashboard/salary/list') }}">List</a>
             </div>
         </div>
     </li>

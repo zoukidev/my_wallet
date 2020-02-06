@@ -17,7 +17,6 @@
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                <!-- <form method="POST" action="{{ url('/tp/add/expense') }}"> -->
                 {{ Form::open(array('url' => 'tp/add/salary', 'method' => 'post')) }}
 
                     <div class="form-row">

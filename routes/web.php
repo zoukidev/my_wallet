@@ -18,6 +18,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/tp', 'Home2Controller@index')->name('home2');
+Route::post('/tp/export_report', 'Home2Controller@export_report');
 // Expense
 Route::get('/tp/expense/list', 'ExpenseController@list');
 Route::get('/tp/expense/add', 'ExpenseController@add');

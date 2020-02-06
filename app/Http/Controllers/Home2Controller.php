@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Salary;
+use App\Expense;
 
 class Home2Controller extends Controller
 {
@@ -44,5 +45,16 @@ class Home2Controller extends Controller
     public function register()
     {
         return view('register');
+    }
+
+    public function export_report()
+    {
+        $salaries = Salary::all();
+        $expenses = Expense::all();
+
+            return response()->json([
+                'salaries' => $salaries,
+                'expenses' => $expenses
+            ]);
     }
 }

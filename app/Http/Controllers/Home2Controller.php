@@ -42,11 +42,6 @@ class Home2Controller extends Controller
         ));
     }
 
-    public function register()
-    {
-        return view('register');
-    }
-
     public function export_report()
     {
         $salaries = Salary::all();
